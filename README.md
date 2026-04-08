@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="infographics/architecture_overview.jpg" alt="StarClode Platform Architecture" width="800">
-</p>
-
 <h1 align="center">StarClode</h1>
 
 <p align="center">
