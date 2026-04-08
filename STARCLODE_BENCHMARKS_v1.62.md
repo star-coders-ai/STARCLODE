@@ -1,9 +1,17 @@
-# StarClode v1.62.0+ — Feature Benchmark Report
+<h1 align="center">StarClode v1.62.0+ — Feature Benchmark Report</h1>
 
-> **A comprehensive assessment of platform capabilities, feature coverage, ecosystem maturity, and self-evolving AI infrastructure**
+<p align="center">
+  <em>A comprehensive assessment of platform capabilities, feature coverage, ecosystem maturity, and self-evolving AI infrastructure</em>
+</p>
 
-| | |
-|---|---|
+<p align="center">
+  <img src="https://img.shields.io/badge/Version-1.62.0+-blue" alt="Version">
+  <img src="https://img.shields.io/badge/Classification-Public-green" alt="Classification">
+  <img src="https://img.shields.io/badge/Date-April%202026-lightgrey" alt="Date">
+</p>
+
+| Field | Detail |
+|-------|--------|
 | **Version** | 1.62.0+ |
 | **Report Date** | April 2026 |
 | **Classification** | Public |
@@ -25,7 +33,9 @@ Content generation capabilities span presentations (six creation approaches), Ex
 
 ## 1. Agent Ecosystem Scale
 
-![Agent Ecosystem Scale](infographics/benchmark_agent_scale.jpg)
+<p align="center">
+  <img src="infographics/benchmark_agent_scale.jpg" alt="Agent Ecosystem Scale" width="750">
+</p>
 
 ### Overview
 
@@ -118,7 +128,9 @@ Six background jobs operate continuously to maintain system health:
 
 ## 3. Memory System Maturity
 
-![Memory System Maturity](infographics/benchmark_memory_maturity.jpg)
+<p align="center">
+  <img src="infographics/benchmark_memory_maturity.jpg" alt="Memory System Maturity" width="750">
+</p>
 
 ### Overview
 
@@ -162,7 +174,9 @@ Dream consolidation is an automated nightly knowledge synthesis process that run
 
 The interactive memory graph (powered by d3-force canvas visualization) renders the full relationship network of a project's knowledge base. The following screenshot shows a real production memory graph from an active StarClode project:
 
-![Memory Graph — Live Production Screenshot](infographics/memory_graph_screenshot.png)
+<p align="center">
+  <img src="infographics/memory_graph_screenshot.png" alt="Memory Graph — Live Production Screenshot" width="750">
+</p>
 
 | Graph Feature | Detail |
 |---|---|
@@ -192,7 +206,9 @@ The interactive memory graph (powered by d3-force canvas visualization) renders 
 
 ## 4. Tool and Integration Ecosystem
 
-![Integration Ecosystem Map](infographics/benchmark_integrations.jpg)
+<p align="center">
+  <img src="infographics/benchmark_integrations.jpg" alt="Integration Ecosystem Map" width="750">
+</p>
 
 ### MCP Server Inventory
 
@@ -508,7 +524,9 @@ The platform ships with English and Italian language support via a locale file s
 
 ## 10. Competitive Feature Matrix
 
-![Competitive Feature Matrix](infographics/benchmark_competitive_matrix.jpg)
+<p align="center">
+  <img src="infographics/benchmark_competitive_matrix.jpg" alt="Competitive Feature Matrix" width="750">
+</p>
 
 The table below compares StarClode v1.62.0+ against seven major tools spanning project management, AI-powered CLI tools, and agentic coding platforms. Ratings reflect publicly documented capabilities as of the report date.
 
@@ -580,9 +598,8 @@ For investors, technical partners, and enterprise evaluators, the benchmark find
 
 ---
 
----
-
 <p align="center">
   <strong>StarClode v1.62.0+ Feature Benchmark Report — April 2026</strong><br>
-  <em>For further information, technical demonstrations, or partnership inquiries, contact the StarClode team.</em>
+  <em>For further information, technical demonstrations, or partnership inquiries, contact the StarClode team.</em><br><br>
+  <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg" alt="License: CC BY-NC-ND 4.0"></a>
 </p>

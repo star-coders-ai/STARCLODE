@@ -1,207 +1,307 @@
-# StarClode — AI-Native Project Management Platform
+<p align="center">
+  <img src="infographics/architecture_overview.jpg" alt="StarClode Platform Architecture" width="800">
+</p>
 
-> Where AI agents are team members, not just tools.
+<h1 align="center">StarClode</h1>
+
+<p align="center">
+  <strong>AI-Native Project Management Platform</strong><br>
+  <em>Where AI agents are team members, not just tools.</em>
+</p>
+
+<p align="center">
+  <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg" alt="License: CC BY-NC-ND 4.0"></a>
+  <img src="https://img.shields.io/badge/Version-1.62.0+-blue" alt="Version">
+  <img src="https://img.shields.io/badge/Agents-20+-green" alt="Agents">
+  <img src="https://img.shields.io/badge/MCP%20Tools-90+-orange" alt="MCP Tools">
+  <img src="https://img.shields.io/badge/Skills-30+-purple" alt="Skills">
+</p>
 
 ---
 
 ## What is StarClode?
 
-StarClode is a production-grade project management platform that embeds AI agents as first-class participants in the software development lifecycle. Unlike conventional tools that treat AI as a chatbot or suggestion engine, StarClode's agents autonomously receive task assignments, write and test code, generate documents, create presentations, and deliver pull requests — all within a governed, team-oriented environment.
+StarClode is a **production-grade project management platform** that embeds AI agents as first-class participants in the software development lifecycle. Unlike conventional tools that treat AI as a chatbot or suggestion engine, StarClode's agents autonomously receive task assignments, write and test code, generate documents, create presentations, and deliver pull requests — all within a governed, team-oriented environment.
 
-The platform combines enterprise project management (sprints, Kanban boards, team collaboration) with a multi-agent AI execution layer, persistent cross-session memory, and a self-evolving skill system — capabilities no single competitor offers together.
+The platform combines **enterprise project management** (sprints, Kanban boards, team collaboration) with a **multi-agent AI execution layer**, **persistent cross-session memory**, and a **self-evolving skill system** — capabilities no single competitor offers together.
+
+> **Audience:** This repository contains public documentation intended for investors, technical partners, and enterprise evaluators.
 
 ---
 
 ## Repository Contents
 
-This repository contains the public documentation package for StarClode, intended for investors, technical partners, and enterprise evaluators.
-
-### Documents
-
-| File | Description | Format |
-|------|-------------|--------|
-| **[STARCLODE_PAPER_v1.62.md](STARCLODE_PAPER_v1.62.md)** | Full technical paper (8,000+ words, 11 sections) | Markdown |
-| **[STARCLODE_PAPER_v1.62.docx](STARCLODE_PAPER_v1.62.docx)** | Technical paper with embedded infographics | Word DOCX |
-| **[STARCLODE_BENCHMARKS_v1.62.md](STARCLODE_BENCHMARKS_v1.62.md)** | Feature benchmark report (5,700+ words, 10 categories) | Markdown |
-| **[STARCLODE_BENCHMARKS_v1.62.docx](STARCLODE_BENCHMARKS_v1.62.docx)** | Benchmark report with embedded infographics | Word DOCX |
-| **[STARCLODE_PAPER_PRESENTATION.pptx](STARCLODE_PAPER_PRESENTATION.pptx)** | 21-slide presentation deck | PowerPoint PPTX |
-
-### Infographics
-
-All infographics are in the [`infographics/`](infographics/) directory and are embedded in the DOCX documents.
+| Document | Description |
+|----------|-------------|
+| [**Technical Paper**](STARCLODE_PAPER_v1.62.md) | Full technical paper — 8,000+ words, 11 sections covering architecture, agents, memory, security, and competitive positioning |
+| [**Benchmark Report**](STARCLODE_BENCHMARKS_v1.62.md) | Feature benchmark — 5,700+ words, 10 capability categories with detailed metrics and competitive matrix |
+| [**Presentation Deck**](STARCLODE_PAPER_PRESENTATION.pptx) | 21-slide executive presentation deck (PowerPoint) |
 
 ---
 
-## Technical Paper — What's Inside
+## Platform Architecture
 
-The technical paper covers StarClode's architecture, capabilities, and positioning across 11 sections:
+StarClode is built on a **three-tier architecture** that separates user-facing concerns, business logic, and the AI execution layer into independently scalable components.
 
-### 1. Abstract
-A concise overview of what StarClode is, what problems it solves, and the four key innovations that distinguish it from the market.
+<p align="center">
+  <img src="infographics/architecture_overview.jpg" alt="Three-Tier Platform Architecture" width="750">
+</p>
 
-### 2. Introduction
-The gap in current AI tooling: powerful code assistants exist, but none integrate into the full project lifecycle. Teams still need separate tools for planning, execution, review, and delivery.
-
-### 3. Platform Architecture
-StarClode's three-tier architecture:
-- **Frontend** — Next.js 14, React 18, Tailwind CSS, real-time WebSocket UI
-- **Backend** — NestJS 10, MongoDB Atlas, Redis/Bull queues, modular domain services
-- **AI Execution Layer** — Claude Agent SDK, extensible agent registry, MCP tool servers, session-isolated workspaces
-
-### 4. Core Features
-The project management foundation: four-level task hierarchy (Project > Sprint > Task > Subtask), four planning views (Kanban, Table, Calendar, Gantt), end-to-end encrypted team messaging, GitHub integration with automatic PR creation, Google Calendar bidirectional sync, and a fully interactive Telegram bot.
-
-### 5. AI Agent System
-The platform's primary differentiator:
-- **20+ specialized agents** organized into 6 categories (Development, Specialist, Business, Automation, Domain-Specific, Content Creation)
-- **Orchestrator model** — a maestro agent decomposes complex tasks and delegates to specialists with structured handoffs
-- **Task-to-PR pipeline** — fully autonomous from assignment to deliverable
-- **Skill auto-generation** (`/skillify`) — captures successful workflows as reusable one-command skills
-- **Skills auto-discovery** — hot-reloads new skill definitions in real time
-- **KAIROS scheduling** — autonomous cron-based agent deployment with LLM guardrails and Telegram approval
-- **Prompt compression** — ~60% token reduction on continued sessions
-
-### 6. Agent Memory System
-A persistent, AI-gated knowledge store that accumulates institutional knowledge across sessions:
-- **AI gatekeeper** — validates every memory before storage
-- **Progressive disclosure** — three-layer architecture minimizing token cost
-- **Dream consolidation** — nightly automated knowledge synthesis, deduplication, and relationship discovery
-- **Memory graph** — interactive d3-force visualization with hub nodes, topic clusters, and N:N relationships
-- **Document ingest** — extracts knowledge from PDFs, DOCX, spreadsheets, and web pages
-- **Topic clustering** — LLM-generated semantic groupings for navigable recall
-
-### 7. Content Creation Toolkit
-Agents produce professional deliverables:
-- **Presentations** — 6 creation approaches (HTML-to-PPTX, template-based, JSON, AI-generated, reveal.js, Pandoc)
-- **Excel/XLSX** — 15 MCP tools + 8 scripts, charts, conditional formatting, data validation
-- **DOCX** — 7-tool tracked changes workflow for co-authoring
-- **Diagrams** — Mermaid (8 types) + Draw.io, plus AI-generated images and video via Gemini Pro
-
-### 8. Security and Authentication
-Enterprise-grade security:
-- Mandatory TOTP two-factor authentication
-- AES-256-GCM token encryption at rest
-- X25519 + XSalsa20-Poly1305 end-to-end encrypted messaging
-- Role-based access control (Owner/Admin/Member)
-- Integrated SAST security scanner (code analysis + secrets detection + dependency audit)
-
-### 9. Integration Ecosystem
-11+ MCP servers providing 90+ tools:
-- MongoDB persistent memory (16 tools)
-- Google Drive file management (12 tools)
-- Browser automation (12 tools)
-- Excel workbook manipulation (15 tools)
-- DOCX revision management (7 tools)
-- Gemini Pro image/video generation (6 tools)
-- Telegram messaging, security scanner, and more
-
-Plus 30+ reusable skills covering memory management, document conversion, presentations, security scanning, browser automation, social media, and more.
-
-### 10. Competitive Comparison
-Detailed comparison against 7 platforms:
-- **Project management tools** — Jira, Linear, GitHub Projects
-- **AI coding tools** — Claude Code CLI, Gemini Code Assist, Cursor/Copilot
-- **Agentic platforms** — Devin
-
-StarClode is the only platform to offer all of: multi-agent orchestration, persistent memory, skill auto-generation, dream consolidation, E2E encrypted chat, and full project management.
-
-### 11. Conclusion and Future Directions
-Summary of the four key innovations and roadmap: enterprise SSO, public API, memory federation across projects, and enhanced model support.
+| Layer | Stack | Purpose |
+|-------|-------|---------|
+| **Frontend** | Next.js 14, React 18, Tailwind CSS, Zustand, SWR | Real-time dashboard, Kanban boards, calendar, agent monitoring |
+| **Backend** | NestJS 10, MongoDB Atlas, Redis/Bull, Socket.io | Business logic, queues, WebSocket streaming, scheduled jobs |
+| **AI Execution** | Claude Agent SDK, MCP servers, session isolation | Agent orchestration, tool access, autonomous task execution |
 
 ---
 
-## Benchmark Report — What's Inside
+## AI Agent System
 
-The benchmark report assesses StarClode across 10 capability categories with detailed metrics:
+The platform's primary differentiator: a **growing fleet of 20+ specialized agents** organized into 6 categories, coordinated by a single orchestrator through structured handoff protocols.
 
-| # | Category | Key Finding |
-|---|----------|-------------|
-| 1 | **Agent Ecosystem Scale** | 20+ agents across 6 categories, extensible via registry |
-| 2 | **Multi-Agent Orchestration** | Single orchestrator with retry, escalation, and session isolation |
-| 3 | **Memory System Maturity** | 16 MCP tools, AI gatekeeper, dream consolidation, d3-force graph |
-| 4 | **Tool & Integration Ecosystem** | 90+ tools, 11+ MCP servers, 30+ auto-generated skills |
-| 5 | **Task Management Coverage** | 4-level hierarchy, 4 views, analytics, agent assignment |
-| 6 | **Real-Time Collaboration** | 3 WebSocket namespaces, E2E encrypted messaging, Telegram bot |
-| 7 | **Security & Authentication** | Mandatory 2FA, AES-256, X25519, SAST scanner |
-| 8 | **Content Generation** | 6 presentation approaches, 15 Excel tools, 7 DOCX tools |
-| 9 | **Platform Scale** | Full-stack TypeScript, 20+ MongoDB collections, dark mode, i18n |
-| 10 | **Competitive Feature Matrix** | 24-feature comparison across 8 platforms |
+<p align="center">
+  <img src="infographics/agent_orchestration_flow.jpg" alt="Agent Orchestration Flow" width="750">
+</p>
 
-The report includes a live production screenshot of the memory graph visualization showing hundreds of interconnected knowledge nodes accumulated through real agent activity.
+### How It Works
 
----
+```
+User assigns task  →  Orchestrator decomposes  →  Specialist agents execute
+                                                          ↓
+Pull Request  ←  Code committed  ←  Tests pass  ←  Implementation complete
+```
 
-## Presentation Deck — 21 Slides
+### Agent Categories
 
-The presentation covers the same material in a visual, executive-friendly format:
+| Category | Examples | Purpose |
+|----------|----------|---------|
+| **Development** | Orchestrator, backend, frontend, DevOps, tester | Core software delivery pipeline |
+| **Specialist** | Security, web design, documentation, legal compliance | Cross-cutting domain expertise |
+| **Business** | Marketing, social media, market analysis | Strategic and market-facing work |
+| **Automation** | Browser automation | Web scraping, screenshots, form filling |
+| **Domain-Specific** | AWS, blockchain, ICT architecture, compliance | Custom organizational expertise |
+| **Content** | Presentations, diagrams, infographics | Professional deliverable creation |
 
-| Slide | Topic |
-|-------|-------|
-| 1 | Title — StarClode branding |
-| 2 | The Problem — gaps in current AI tooling |
-| 3 | Platform Architecture — three-tier design |
-| 4 | Core Features — 6 key capabilities |
-| 5 | AI Agent Ecosystem — orchestrator + 20+ specialists |
-| 6 | Task-to-PR Pipeline — autonomous 7-step flow |
-| 7 | CronJob Sprint Launchers — scheduled agent deployment |
-| 8 | KAIROS Project Health — autonomous monitoring, task creation, reporting |
-| 9 | Self-Evolving Skills — /skillify auto-generation |
-| 10 | Persistent Memory System — 4-layer architecture |
-| 11 | Memory Graph — live production screenshot |
-| 12 | Content Creation Toolkit — PPTX, XLSX, DOCX, Diagrams |
-| 13 | Enterprise Security — encryption, auth, RBAC |
-| 14 | Privacy & Session Isolation — sealed execution environments |
-| 15 | Integration Ecosystem — 11+ MCP server radial map |
-| 16 | Competitive Matrix — vs Jira, Linear, Claude CLI, Cursor, Devin |
-| 17 | vs AI CLI Tools — positioning comparison |
-| 18 | Enterprise Use Cases — full project lifecycle |
-| 19 | Platform Metrics — key numbers |
-| 20 | Future Directions — roadmap |
-| 21 | Closing — key differentiators + contact |
+### Key Capabilities
+
+- **Task-to-PR Pipeline** — Fully autonomous from assignment to deliverable, no human intervention required
+- **Skill Auto-Generation** — `/skillify` captures successful workflows as reusable one-command skills
+- **Skills Auto-Discovery** — Hot-reloads new skill definitions in real time
+- **KAIROS Scheduling** — Autonomous cron-based agent deployment with LLM guardrails and Telegram approval
+- **Prompt Compression** — ~60% token reduction on continued sessions
+- **Session Isolation** — Every agent runs in a unique workspace, preventing cross-session interference
 
 ---
 
-## Key Differentiators at a Glance
+## Persistent Memory System
 
-| Capability | StarClode | Traditional PM | AI CLI Tools | Agentic Tools |
-|------------|-----------|----------------|--------------|----------------|
-| Multi-Agent Orchestration | 20+ agents, 6 categories | None | Single agent | Single agent |
-| Persistent Memory | Cross-session, AI-gated | None | Session only | Limited |
-| Self-Evolving Skills | /skillify auto-capture | None | None | None |
-| Dream Consolidation | Nightly synthesis | None | None | None |
-| Sprint Management | Full (4 views) | Full | None | None |
-| E2E Encrypted Chat | X25519 + XSalsa20 | Rare | N/A | None |
-| Content Toolkit | PPTX/XLSX/DOCX/Diagrams | None | Via prompting | None |
-| Team Collaboration | Full | Full | None | None |
+A **cross-session, AI-gated knowledge store** that accumulates institutional knowledge — the longer StarClode operates, the smarter its agents become.
 
----
+<p align="center">
+  <img src="infographics/memory_system.jpg" alt="Memory System Architecture" width="750">
+</p>
 
-## Visual Preview
+### Architecture
 
-### Platform Architecture
-![Architecture Overview](infographics/architecture_overview.jpg)
+| Layer | Purpose | Token Cost |
+|-------|---------|------------|
+| **L1 — Compact Index** | Quick scan of matching memories with relevance scores | Minimal |
+| **L2 — Timeline View** | Chronological context with moderate detail | Moderate |
+| **L3 — Full Detail** | Complete memory records for selected items | Full |
 
-### Agent Orchestration
-![Agent Orchestration Flow](infographics/agent_orchestration_flow.jpg)
+> **Result:** ~10x token reduction compared to naive full-fetch approaches.
 
-### Memory System
-![Memory System](infographics/memory_system.jpg)
+### Features
+
+| Feature | Description |
+|---------|-------------|
+| **AI Gatekeeper** | Validates every memory before storage — filters ephemeral data, detects scope, extracts keywords, deduplicates |
+| **Dream Consolidation** | Nightly automated knowledge synthesis — merges redundant memories, archives stale ones, discovers new relationships |
+| **Topic Clustering** | LLM-generated semantic groupings (5-15 per project) for navigable recall |
+| **Memory Ingest** | Extracts knowledge from PDFs, DOCX, spreadsheets, JSON, CSV, and web pages |
+| **N:N Relations** | Many-to-many typed relationships (updates, extends, derives) forming a traversable knowledge graph |
 
 ### Memory Graph — Live Production
-![Memory Graph](infographics/memory_graph_screenshot.png)
 
-### Integration Ecosystem
-![Integration Ecosystem](infographics/integration_ecosystem.jpg)
+The interactive memory graph renders the full knowledge network as a **d3-force directed graph** on HTML5 Canvas:
 
-### Competitive Landscape
-![Platform Comparison](infographics/platform_comparison.jpg)
+<p align="center">
+  <img src="infographics/memory_graph_screenshot.png" alt="Memory Graph — Live Production Screenshot" width="750">
+</p>
 
----
-
-## Contact
-
-For technical demonstrations, partnership inquiries, or enterprise licensing, contact the StarClode team.
+> *Real production screenshot showing hundreds of interconnected knowledge nodes accumulated through weeks of agent activity. Blue = facts, amber = decisions, gray = entities. Hub nodes cluster related memories by topic.*
 
 ---
 
-*StarClode v1.62.0+ — April 2026*
+## Content Creation Toolkit
+
+Agents produce **professional-quality deliverables** — not just code:
+
+| Domain | Capabilities |
+|--------|-------------|
+| **Presentations** | 6 creation approaches (HTML→PPTX, template-based, JSON→PPTX, Gemini AI, reveal.js, Pandoc) |
+| **Excel/XLSX** | 15 MCP tools + 8 scripts, 7 chart types, conditional formatting, data validation |
+| **DOCX** | 7-tool tracked changes workflow — agents co-author in native Word format |
+| **Diagrams** | Mermaid.js (8 types) + Draw.io visual editor, inline in task descriptions |
+| **Images** | Gemini Pro AI generation up to 4K resolution |
+| **Video** | Veo 3.1 video clips, 4-8 seconds, up to 4K |
+
+---
+
+## Integration Ecosystem
+
+**11+ MCP servers** providing **90+ tools** to agents at runtime, plus **30+ reusable skills** that grow through use.
+
+<p align="center">
+  <img src="infographics/integration_ecosystem.jpg" alt="Integration Ecosystem" width="750">
+</p>
+
+| MCP Server | Tools | Domain |
+|------------|-------|--------|
+| memory-mongodb | 16 | Persistent agent memory |
+| google-drive | 12 | File management, shared drives |
+| excel | 15 | Workbook creation, charts, formatting |
+| docx-revision | 7 | Tracked changes, co-authoring |
+| security-scanner | 6 | SAST, secrets detection, dependency audit |
+| mongodb | ~8 | Database queries and administration |
+| gemini-pro | ~6 | AI image/video generation |
+| browser-automation | ~8 | Web scraping, screenshots |
+| telegram | ~5 | Bot messaging and notifications |
+
+### External Integrations
+
+| Platform | Capabilities |
+|----------|-------------|
+| **GitHub** | OAuth2, branch creation from tasks, auto PR with descriptions, bulk merge |
+| **Google Calendar** | Bidirectional sync — push tasks, pull events |
+| **Google Drive** | 12 tools, auto-export Docs/Sheets/Slides |
+| **Telegram** | Full interactive bot — commands, callbacks, deadline alerts, KAIROS approvals |
+| **Gemini Pro** | Image generation (4K), video clips (Veo 3.1), text-to-speech (30 voices) |
+
+---
+
+## Security
+
+Enterprise-grade security built in at every layer — not bolted on afterward.
+
+| Layer | Standard |
+|-------|----------|
+| **Authentication** | JWT (15min access / 7day refresh) + **mandatory TOTP 2FA** |
+| **Passwords** | bcrypt, 12+ rounds |
+| **Tokens at rest** | AES-256-GCM encryption |
+| **Messaging** | X25519 + XSalsa20-Poly1305 end-to-end encryption |
+| **Key derivation** | PBKDF2 via Web Crypto API — server never holds plaintext keys |
+| **Access control** | RBAC: Admin/User (platform) + Editor/Viewer (team), 10+ NestJS guards |
+| **Transport** | Helmet headers, strict CORS, rate limiting, input validation |
+| **Code scanning** | Integrated SAST scanner — static analysis + secrets detection + dependency audit |
+
+---
+
+## Competitive Positioning
+
+<p align="center">
+  <img src="infographics/platform_comparison.jpg" alt="Competitive Landscape" width="750">
+</p>
+
+### StarClode vs. The Market
+
+| Capability | StarClode | Jira | Linear | Claude Code CLI | Cursor | Devin |
+|------------|:---------:|:----:|:------:|:---------------:|:------:|:-----:|
+| Multi-Agent Orchestration | **20+ agents** | — | — | Single | Single | Single |
+| Persistent Memory | **Cross-session** | — | — | Session only | Session only | Limited |
+| Skill Auto-Generation | **/skillify** | — | — | — | — | — |
+| Dream Consolidation | **Nightly** | — | — | — | — | — |
+| Sprint Management | **Full (4 views)** | Full | Full | — | — | — |
+| E2E Encrypted Chat | **X25519** | — | — | N/A | N/A | — |
+| Content Toolkit | **PPTX/XLSX/DOCX** | — | — | Via prompting | Via prompting | — |
+| MCP Tool Ecosystem | **90+ tools** | — | — | Via MCP | Limited | Limited |
+| Self-Evolving Platform | **Yes** | — | — | — | — | — |
+
+> **StarClode is the only platform to offer ALL of:** multi-agent orchestration, persistent memory, skill auto-generation, dream consolidation, E2E encrypted chat, and full project management — in a single product.
+
+### Why Not Just CLI Tools?
+
+```
+CLI Tools  =  Single developer  ×  Single session  ×  Single agent
+StarClode  =  Entire team  ×  Persistent memory  ×  20+ specialists  ×  Full project lifecycle
+```
+
+StarClode uses the same foundation models (Claude for agents, Gemini for media) but wraps them in project management, team collaboration, knowledge accumulation, and multi-agent coordination.
+
+---
+
+## Benchmark Highlights
+
+<p align="center">
+  <img src="infographics/benchmark_competitive_matrix.jpg" alt="Competitive Feature Matrix" width="750">
+</p>
+
+The [full benchmark report](STARCLODE_BENCHMARKS_v1.62.md) assesses StarClode across **10 capability categories**:
+
+| # | Category | Key Finding |
+|:-:|----------|-------------|
+| 1 | **Agent Ecosystem** | 20+ agents across 6 categories, extensible via registry |
+| 2 | **Orchestration** | Single orchestrator with retry, escalation, session isolation |
+| 3 | **Memory System** | 16 MCP tools, AI gatekeeper, dream consolidation, d3-force graph |
+| 4 | **Tool Ecosystem** | 90+ tools, 11+ MCP servers, 30+ auto-generated skills |
+| 5 | **Task Management** | 4-level hierarchy, 4 views, analytics, agent assignment |
+| 6 | **Collaboration** | 3 WebSocket namespaces, E2E encrypted messaging, Telegram bot |
+| 7 | **Security** | Mandatory 2FA, AES-256, X25519, SAST scanner |
+| 8 | **Content Generation** | 6 presentation approaches, 15 Excel tools, 7 DOCX tools |
+| 9 | **Platform Scale** | Full-stack TypeScript, 20+ MongoDB collections, dark mode, i18n |
+| 10 | **Feature Matrix** | 24-feature comparison across 8 platforms |
+
+---
+
+## Infographics Gallery
+
+<details>
+<summary><strong>View all infographics</strong></summary>
+
+<br>
+
+**Agent Ecosystem Scale**
+<p align="center"><img src="infographics/benchmark_agent_scale.jpg" alt="Agent Ecosystem Scale" width="700"></p>
+
+**Memory System Maturity**
+<p align="center"><img src="infographics/benchmark_memory_maturity.jpg" alt="Memory System Maturity" width="700"></p>
+
+**Integration Ecosystem Map**
+<p align="center"><img src="infographics/benchmark_integrations.jpg" alt="Integration Ecosystem Map" width="700"></p>
+
+**Competitive Feature Matrix**
+<p align="center"><img src="infographics/benchmark_competitive_matrix.jpg" alt="Competitive Feature Matrix" width="700"></p>
+
+</details>
+
+---
+
+## Presentation Deck
+
+The [21-slide presentation](STARCLODE_PAPER_PRESENTATION.pptx) covers the same material in a visual, executive-friendly format:
+
+| Slides | Topics |
+|--------|--------|
+| 1-2 | Title and problem statement |
+| 3-4 | Platform architecture and core features |
+| 5-6 | AI agent ecosystem and task-to-PR pipeline |
+| 7-8 | CronJob sprint launchers and KAIROS project health |
+| 9-11 | Self-evolving skills, persistent memory, memory graph |
+| 12-14 | Content toolkit, enterprise security, privacy & isolation |
+| 15-17 | Integration ecosystem, competitive matrix, vs CLI tools |
+| 18-21 | Enterprise use cases, metrics, future directions, closing |
+
+---
+
+## License
+
+This repository and its contents are licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+
+You are free to share and reference this material with proper attribution. Commercial use, modifications, and derivative works are not permitted without explicit written consent from the StarClode team.
+
+---
+
+<p align="center">
+  <strong>StarClode v1.62.0+</strong> — April 2026<br>
+  <em>For technical demonstrations, partnership inquiries, or enterprise licensing, contact the StarClode team.</em>
+</p>

@@ -1,11 +1,15 @@
-# StarClode: An AI-Native Project Management Platform with Multi-Agent Orchestration, Persistent Memory, and Self-Evolving Skills
+<h1 align="center">StarClode: An AI-Native Project Management Platform<br>with Multi-Agent Orchestration, Persistent Memory, and Self-Evolving Skills</h1>
 
-> **Technical Paper — Version 1.62.0+**
->
-> StarClode Engineering Team | April 2026 | Classification: Public
+<p align="center"><strong>Technical Paper — Version 1.62.0+</strong></p>
 
-| | |
-|---|---|
+<p align="center">
+  <img src="https://img.shields.io/badge/Version-1.62.0+-blue" alt="Version">
+  <img src="https://img.shields.io/badge/Classification-Public-green" alt="Classification">
+  <img src="https://img.shields.io/badge/Date-April%202026-lightgrey" alt="Date">
+</p>
+
+| Field | Detail |
+|-------|--------|
 | **Version** | 1.62.0+ |
 | **Date** | April 2026 |
 | **Authors** | StarClode Engineering Team |
@@ -17,7 +21,7 @@
 ## Table of Contents
 
 | # | Section | Key Topics |
-|---|---------|------------|
+|:-:|---------|------------|
 | 1 | [Abstract](#1-abstract) | Platform overview, four key innovations |
 | 2 | [Introduction](#2-introduction) | Problem statement, market gap, approach |
 | 3 | [Platform Architecture](#3-platform-architecture) | Three-tier design, session isolation |
@@ -66,7 +70,9 @@ Version 1.62.0 of StarClode represents the platform's most comprehensive release
 
 StarClode is built on a three-tier architecture that separates user-facing concerns, business logic and data management, and the AI execution layer into distinct, independently scalable components.
 
-![Platform Architecture](infographics/architecture_overview.jpg)
+<p align="center">
+  <img src="infographics/architecture_overview.jpg" alt="Platform Architecture" width="750">
+</p>
 
 ### 3.1 Frontend Layer
 
@@ -128,7 +134,9 @@ The Telegram integration goes substantially beyond notification delivery. A full
 
 The AI agent system is StarClode's primary differentiating capability. It transforms the platform from a task tracker into an autonomous development environment where AI agents become accountable participants in software delivery.
 
-![Agent Orchestration Flow](infographics/agent_orchestration_flow.jpg)
+<p align="center">
+  <img src="infographics/agent_orchestration_flow.jpg" alt="Agent Orchestration Flow" width="750">
+</p>
 
 ### 5.1 The Extensible Agent Ecosystem
 
@@ -192,7 +200,9 @@ KAIROS (the platform's dynamic cron job system) enables agents to operate on sch
 
 The agent memory system is StarClode's second major differentiator. Software development generates knowledge that accumulates across sessions: architectural decisions, discovered constraints, preferred patterns, team conventions, integration quirks, and lessons learned from previous failures. Without a mechanism to persist and recall this knowledge, every new agent session starts from zero, re-discovering information that was previously worked out at cost. The StarClode memory system solves this problem.
 
-![Memory System Architecture](infographics/memory_system.jpg)
+<p align="center">
+  <img src="infographics/memory_system.jpg" alt="Memory System Architecture" width="750">
+</p>
 
 ### 6.1 System Overview
 
@@ -230,7 +240,9 @@ The topic clustering capability organizes project memories into semantic groups 
 
 The memory graph, accessible from the platform's administrative interface, renders the memory knowledge base as an interactive force-directed graph using D3's physics simulation on HTML5 Canvas. The following screenshot shows a real production memory graph from an active StarClode project:
 
-![Memory Graph — Live Production Screenshot](infographics/memory_graph_screenshot.png)
+<p align="center">
+  <img src="infographics/memory_graph_screenshot.png" alt="Memory Graph — Live Production Screenshot" width="750">
+</p>
 
 Nodes represent individual memories, colored by category (blue for facts, amber/orange for decisions, gray for entities), with visual distinctions for the latest version of a memory chain (glow ring), soft-deleted memories (dashed stroke), and versioned memories (version number badge). Hub nodes for projects, categories, and semantic topics appear as differently styled node types with starburst-orbit force configurations that cluster associated memories around them. Edges are styled by relation type: updates use solid gray lines, extends use dashed lines, derives use thick blue lines. Users can pan by dragging empty space, zoom with scroll, reposition nodes by dragging, and hover over nodes for a tooltip showing memory details. The visualization scales to hundreds of nodes with thousands of relationships, providing a navigable overview of the accumulated project knowledge structure. The screenshot above demonstrates a real knowledge network with dense interconnections between memory clusters — the result of weeks of agent activity accumulating institutional knowledge.
 
@@ -292,7 +304,9 @@ The security scanner MCP server provides agents with integrated security analysi
 
 StarClode's integration ecosystem is built on the Model Context Protocol, an open standard for providing AI agents with structured access to external tools and data sources.
 
-![Integration Ecosystem](infographics/integration_ecosystem.jpg)
+<p align="center">
+  <img src="infographics/integration_ecosystem.jpg" alt="Integration Ecosystem" width="750">
+</p>
 
 ### 9.1 MCP Server Architecture
 
@@ -338,7 +352,9 @@ Crucially, skills are not static. The `/skillify` auto-generation command (Secti
 
 The project management and AI development tool landscapes provide useful benchmarks for contextualizing StarClode's capabilities and positioning.
 
-![Platform Comparison](infographics/platform_comparison.jpg)
+<p align="center">
+  <img src="infographics/platform_comparison.jpg" alt="Platform Comparison" width="750">
+</p>
 
 ### 10.1 StarClode vs. Jira
 
@@ -428,9 +444,8 @@ StarClode's trajectory is toward a platform where the boundary between human and
 
 ---
 
----
-
 <p align="center">
   <strong>StarClode Technical Paper v1.62.0+ — April 2026</strong><br>
-  <em>For partnership inquiries, enterprise licensing, or technical demonstrations, contact the StarClode team.</em>
+  <em>For partnership inquiries, enterprise licensing, or technical demonstrations, contact the StarClode team.</em><br><br>
+  <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/"><img src="https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg" alt="License: CC BY-NC-ND 4.0"></a>
 </p>
